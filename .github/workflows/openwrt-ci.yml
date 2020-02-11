@@ -115,13 +115,14 @@ jobs:
           cat >> .config <<EOF
           CONFIG_EFI_IMAGES=y
           EOF
-          
-          # 设置根目录大小
-	     cat >> .config <<EOF
-	     CONFIG_TARGET_KERNEL_PARTSIZE=64
-	     CONFIG_TARGET_ROOTFS_PARTSIZE=300
-	     CONFIG_TARGET_ROOTFS_PARTNAME=""
-	     EOF
+
+
+           # 设置根目录大小
+          cat >> .config <<EOF
+          CONFIG_TARGET_KERNEL_PARTSIZE=64
+          CONFIG_TARGET_ROOTFS_PARTSIZE=300
+          CONFIG_TARGET_ROOTFS_PARTNAME=""
+          EOF        
 
           # IPv6支持:
           cat >> .config <<EOF
